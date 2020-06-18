@@ -17,12 +17,7 @@ class TestList(unittest.TestCase):
     def test_make_list_non_numeric(self, input):
         with self.assertRaises(ValueError):
             topic1.make_list()
-    def test_make_list_below_range(self):
-        with self.assertRaises(ValueError): #when list is less than 1
-            topic1.make_list()
-    def test_make_list_above_range(self):
-        with self.assertRaises(ValueError): #when list is greater than 50
-            topic1.make_list()
+
 
 if __name__=='__main__':
     unittest.main()
