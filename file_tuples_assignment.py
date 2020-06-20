@@ -1,8 +1,19 @@
-#tie together unrelated tuple and arbitrary argument list
-#to perform file input adn output
+"""
+Program name: file_tuples_assignment.py
+Author: Rachel Li
+Last date modified: 06/20/2020
+
+The purpose of this program is to tie together unrelated tuple
+and arbitrary argument list
+to perform file input and output.
+"""
+
 import os as os
 #write function write_to_file()
 def write_to_file(*args):
+    """
+    :param args: arbitrary input to file
+    """
     # accepts tuple to be added to the end of file
     # open student_info.txt for appending
     try:
@@ -14,6 +25,12 @@ def write_to_file(*args):
 
 #write function get_student_info()
 def get_student_info():
+    """
+    :param student_name: for name input
+    :param score_list: to store scores
+    :param score: to get score input
+    :raise keyError: raises an exception
+    """
     student_name = input("Enter student name: ")
     score_list = []
     score = 0
@@ -32,11 +49,16 @@ def get_student_info():
             raise ValueError
     #stores name and ascore in tuple
     #call function write_to_file()
-    write_to_file(student_name, score_list)
+    tuple_store = tuple(score_list)
+    write_to_file(student_name, tuple_store)
     #send typle to be written to the end of the file
 
 #write function read_from_file()
 def read_from_file():
+    """
+    :param file_dir: to direct file
+    :param file_name: name of file directed to
+    """
     file_dir = os.path.dirname(__file__)
     file_name = "student_info.txt"
     f = open(os.path.join(file_dir, file_name), "r")
