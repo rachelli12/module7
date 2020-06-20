@@ -39,7 +39,7 @@ def get_student_info():
     sentinel = -99
     while score != sentinel:
         try:
-            score = int(input("Enter number between 0 and 100, or -99 to stop"))
+            score = int(input("Enter number between 0 and 100, or -99 to stop: "))
             if 0 <= score <= 100 and score != -99:
                 score_list.append(score)
             elif score < 0 or score > 100 and score != -99:
