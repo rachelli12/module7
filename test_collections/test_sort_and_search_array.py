@@ -1,3 +1,10 @@
+"""
+Program name: test_sort_and_search_array.py
+Author: Rachel Li
+Last date modified: 06/21/2020
+
+The purpose of this program is to test sort_and_search_array.py
+"""
 import unittest
 import unittest.mock as mock
 from fun_with_collections import sort_and_search_array as ssa
