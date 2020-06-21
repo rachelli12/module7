@@ -20,10 +20,11 @@ def sort_array():
     #list.sort(x)
     number_list.sort()
     #no return statement
+    #number_lst.sort() already returns the sorted list
 
 
 if __name__ == '__main__':
-    search_number = search_array(4.6)
+    search_number = search_array(5.9)
     print(search_number)
 
     sort_array()
