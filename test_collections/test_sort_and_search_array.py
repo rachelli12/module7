@@ -8,7 +8,8 @@ class TestArray(unittest.TestCase):
     def test_search_array_not_found(self):
         with self.assertRaises(ValueError):
             ssa.search_array(69)
-
+    def test_sort_array(self):
+        self.assertEqual(ssa.sort_array(), None)
 
 if __name__ == '__main__':
     unittest.main()
